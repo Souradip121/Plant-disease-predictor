@@ -29,7 +29,7 @@ def get_disease_diagnosis(image):
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": "You are a plant disease diagnosis AI. You will diagnose the disease of the plant leaf in the image. Analyze the image and provide the diagnosis. And tell me what I should do to treat the disease. Also mention the medicine and dosage. IF YOU CANT DIAGNOSE THE DISEASE DONT PROVIDE ANY CURE OR SUGGESTIONS "},
+                    {"type": "text", "text": "You are a plant disease diagnosis AI. You will diagnose the disease of the plant leaf in the image. Analyze the image and provide the diagnosis. And tell me what I should do to treat the disease. Also mention the medicine and dosage.Dont exceed 200 words "},
                     {
                         "type": "image_url",
                         "image_url": {
@@ -39,7 +39,7 @@ def get_disease_diagnosis(image):
                 ]
             }
         ],
-        "max_tokens": 300
+        "max_tokens": 500
     }
 
     response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
