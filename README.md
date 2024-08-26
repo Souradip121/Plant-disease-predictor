@@ -77,7 +77,7 @@ Once activated, your terminal prompt should change to indicate that the virtual 
 With the virtual environment activated, install the necessary Python packages using `pip`:
 
 ```bash
-pip install streamlit openai pillow requests
+pip install -r requirements.txt
 ```
 
 This command installs the following libraries:
